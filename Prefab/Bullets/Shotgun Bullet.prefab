@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4151894258092657131}
   - component: {fileID: 4151894258092657130}
   - component: {fileID: 4151894258092657128}
+  - component: {fileID: 3616355524909937356}
+  - component: {fileID: 5534827793436830729}
   m_Layer: 0
   m_Name: Shotgun Bullet
   m_TagString: Untagged
@@ -96,3 +98,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 4
   _speed: 15
+--- !u!60 &3616355524909937356
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151894258092657125}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2048, y: 0.164}
+    newSize: {x: 5.12, y: 4.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.045599997, y: 0.0416}
+      - {x: -0.0624, y: 0.0296}
+      - {x: -0.0624, y: -0.0212}
+      - {x: -0.0592, y: -0.0376}
+      - {x: -0.0484, y: -0.0416}
+      - {x: 0.072399996, y: -0.0416}
+      - {x: 0.072399996, y: 0.0416}
+--- !u!50 &5534827793436830729
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151894258092657125}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

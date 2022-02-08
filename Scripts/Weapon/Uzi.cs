@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Pistol : Weapon
+public class Uzi : Weapon
 {
     public override void Shoot(Transform shootPoint)
     {
