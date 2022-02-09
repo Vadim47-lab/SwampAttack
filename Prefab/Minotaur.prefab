@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 5
   _reward: 1
-  _target: {fileID: 0}
+  _target: {fileID: 1689412265314473229, guid: dcba9d5b301e135439f548ce66b67974, type: 3}
 --- !u!114 &4281393545704613296
 MonoBehaviour:
   m_ObjectHideFlags: 0
