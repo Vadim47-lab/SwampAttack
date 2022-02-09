@@ -13,6 +13,12 @@ GameObject:
   - component: {fileID: 4281393545238368534}
   - component: {fileID: 4281393545238368535}
   - component: {fileID: 4281393545238368532}
+  - component: {fileID: 4281393545704613296}
+  - component: {fileID: 2892354580650528911}
+  - component: {fileID: 9054749884246005693}
+  - component: {fileID: 4959389008756537209}
+  - component: {fileID: 3408027534779299478}
+  - component: {fileID: 4281393545704613297}
   m_Layer: 0
   m_Name: Minotaur
   m_TagString: Untagged
@@ -157,3 +163,88 @@ MonoBehaviour:
   _health: 5
   _reward: 1
   _target: {fileID: 0}
+--- !u!114 &4281393545704613296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281393545238368539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4b967d5effe0f49be5a86b446cba13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firstState: {fileID: 2892354580650528911}
+--- !u!114 &2892354580650528911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281393545238368539}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f317ce298a6854c4193c188a2a1af333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions:
+  - {fileID: 9054749884246005693}
+  _speed: 2
+--- !u!114 &9054749884246005693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281393545238368539}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e11a86c88626f47a88797b5b4c17a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetState: {fileID: 4959389008756537209}
+  _transitionRange: 1
+  _rangeSpread: 0.5
+--- !u!114 &4959389008756537209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281393545238368539}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417d0131868464945a29e3a8d6f3445b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions:
+  - {fileID: 3408027534779299478}
+  _damage: 5
+  _delay: 1
+--- !u!114 &3408027534779299478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281393545238368539}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352cc7dd7880fed4db12aec466e13053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetState: {fileID: 4281393545704613297}
+--- !u!114 &4281393545704613297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281393545238368539}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c56e65d8fa1a6434eae0614b570badad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions: []
