@@ -39,8 +39,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void EnemyDied(int reward)
+    public void AddMoney(int money)
     {
-        Money += reward;
+        Money += money;
     }
 }
