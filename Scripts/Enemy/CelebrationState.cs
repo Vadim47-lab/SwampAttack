@@ -4,6 +4,8 @@
 public class CelebrationState : State
 {
     private Animator _animator;
+    private readonly string _celebration = "_Celebration";
+    private readonly string _attack = "_Attack";
 
     private void Awake()
     {
@@ -12,7 +14,8 @@ public class CelebrationState : State
 
     private void OnEnable()
     {
-        _animator.Play("Celebration");
+        _animator.SetBool(_attack, false);
+        _animator.SetBool(_celebration, true);
     }
 
     private void OnDisable()

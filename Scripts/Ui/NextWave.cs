@@ -8,13 +8,13 @@ public class NextWave : MonoBehaviour
 
     private void OnEnable()
     {
-        _spawner.AllEnemySpawned += OnAllEnemySpawned;
+        _spawner.AllEnemiesSpawned += OnAllEnemySpawned;
         _nextWaveButton.onClick.AddListener(OnNextWaveButtonClick);
     }
 
     private void OnDisable()
     {
-        _spawner.AllEnemySpawned -= OnAllEnemySpawned;
+        _spawner.AllEnemiesSpawned -= OnAllEnemySpawned;
         _nextWaveButton.onClick.RemoveListener(OnNextWaveButtonClick);
     }
 

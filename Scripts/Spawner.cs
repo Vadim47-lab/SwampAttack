@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.Events;
 using UnityEngine;
 
@@ -10,10 +11,10 @@ public class Spawner : MonoBehaviour
 
     private Wave _currentWave;
     private int _currentWaveNumber = 0;
-    private float _timeAfterLastSpawn;
+    private float _delay;
     private int _spawned;
 
-    public event UnityAction AllEnemySpawned;
+    public event UnityAction AllEnemiesSpawned;
 
     private void Start()
     {
@@ -27,24 +28,33 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        _timeAfterLastSpawn += Time.deltaTime;
-
-        if (_timeAfterLastSpawn > _currentWave.Delay)
-        {
-            InstantiateEnemy();
-            _spawned++;
-            _timeAfterLastSpawn = 0;
-        }
+        StartCoroutine(SpawnEnemy());
 
         if (_currentWave.Count <= _spawned)
         {
             if(_waves.Count > _currentWaveNumber + 1)
             {
-                AllEnemySpawned?.Invoke();
+                AllEnemiesSpawned?.Invoke();
             }
 
             _currentWave = null;
         }
+    }
+
+    private IEnumerator SpawnEnemy()
+    {
+        var waitForSeconds = new WaitForSeconds(_delay);
+
+        _delay += Time.deltaTime;
+
+        if (_delay > _currentWave.Delay)
+        {
+            InstantiateEnemy();
+            _spawned++;
+            _delay = 0;
+        }
+
+       yield return waitForSeconds;
     }
 
     private void InstantiateEnemy()
