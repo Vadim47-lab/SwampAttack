@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     private int _currentHealth;
 
     public int Money { get; private set; }
+
+    public event UnityAction<int, int> HealthChanged;
 
     private void Start()
     {
@@ -32,6 +35,7 @@ public class Player : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _currentHealth -= damage;
+        HealthChanged?.Invoke(_currentHealth, _health);
 
         if (_currentHealth <= 0)
         {
