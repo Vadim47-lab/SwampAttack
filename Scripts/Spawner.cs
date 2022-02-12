@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     private int _spawned;
 
     public event UnityAction AllEnemiesSpawned;
+    public event UnityAction<int, int> EnemyCountChanged;
 
     private void Start()
     {
@@ -52,6 +53,7 @@ public class Spawner : MonoBehaviour
             InstantiateEnemy();
             _spawned++;
             _delay = 0;
+            EnemyCountChanged?.Invoke(_spawned, _currentWave.Count);
         }
 
        yield return waitForSeconds;
@@ -67,6 +69,7 @@ public class Spawner : MonoBehaviour
     private void SetWave(int index)
     {
         _currentWave = _waves[index];
+        EnemyCountChanged?.Invoke(0,1);
     } 
 
     public void NextWave()
