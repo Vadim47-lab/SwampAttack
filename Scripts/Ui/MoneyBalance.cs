@@ -8,7 +8,17 @@ public class MoneyBalance : MonoBehaviour
 
     private void OnEnable()
     {
-        _money.text = "Деньги = ";
-        _money.text = _player.Money.ToString();
+        _money.text = "Деньги = " + _player.Money.ToString();
+        _player.MoneyChanged += OnMoneyChanged;
+    }
+
+    private void OnDisable()
+    {
+        _player.MoneyChanged -= OnMoneyChanged;
+    }
+
+    private void OnMoneyChanged(int money)
+    {
+        _money.text = "Деньги = " + money.ToString();
     }
 }

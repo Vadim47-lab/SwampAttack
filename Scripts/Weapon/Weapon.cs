@@ -14,6 +14,11 @@ public abstract class Weapon : MonoBehaviour
     public Sprite Icon => _icon;
     public bool IsBuyed => _isBuyed;
 
+    public void BlockWeapon(Weapon weapon)
+    {
+        weapon._isBuyed = false;
+    }
+
     public abstract void Shoot(Transform shootPoint);
 
     public void Buy()

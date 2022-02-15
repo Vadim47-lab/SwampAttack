@@ -13,6 +13,7 @@ public class Shop : MonoBehaviour
         for (int i = 0; i < _weapons.Count; i++)
         {
             AddItem(_weapons[i]);
+            _weapons[i].BlockWeapon(_weapons[i]);
         }
     }
 
