@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private WeaponView _template;
     [SerializeField] private GameObject _itemContainer;
+    [SerializeField] private AudioClip _buttonPress;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class Shop : MonoBehaviour
 
     private void AddItem(Weapon weapon)
     {
+        GetComponent<AudioSource>().PlayOneShot(_buttonPress);
         var view = Instantiate(_template, _itemContainer.transform);
         view.SellButtonClick += OnSellButtonClick;
         view.Render(weapon);

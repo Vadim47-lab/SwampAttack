@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health;
     [SerializeField] private int _reward;
+    [SerializeField] private AudioClip _buttonPress;
 
     private Player _target;
 
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        GetComponent<AudioSource>().PlayOneShot(_buttonPress);
         _health -= damage;
 
         if (_health <= 0)

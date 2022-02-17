@@ -9,10 +9,10 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Player _player;
 
-    private Wave _currentWave;
     private int _currentWaveNumber = 0;
     private float _delay;
     private int _spawned;
+    private Wave _currentWave;
 
     public event UnityAction AllEnemiesSpawned;
     public event UnityAction<int, int> EnemyCountChanged;

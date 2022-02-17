@@ -119,6 +119,9 @@ MonoBehaviour:
   _weapons:
   - {fileID: 1146001236299118229, guid: b3e20bdfa590b6d45b245eba63c53408, type: 3}
   _shootPoint: {fileID: 1689412265756819393}
+  _fire: {fileID: 0}
+  _gameOver: {fileID: 0}
+  _spawner: {fileID: 0}
 --- !u!1 &1689412265756819394
 GameObject:
   m_ObjectHideFlags: 0
